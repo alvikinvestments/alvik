@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alvik Investments - Precision ICT Solutions</title>
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+<link rel="shortcut icon" href="assets/favicon/favicon.ico">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-tint": "#006e0e",
+                      "surface-dim": "#d8dadc",
+                      "error": "#ba1a1a",
+                      "background": "#f7f9fb",
+                      "on-secondary-fixed-variant": "#44474b",
+                      "inverse-primary": "#73de67",
+                      "on-primary": "#ffffff",
+                      "surface-container": "#eceef0",
+                      "on-background": "#191c1e",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-tertiary-fixed-variant": "#38485d",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed": "#d3e4fe",
+                      "primary-container": "#4fb948",
+                      "tertiary-fixed-dim": "#b7c8e1",
+                      "on-tertiary-container": "#2b3b4f",
+                      "primary-fixed": "#8efb80",
+                      "secondary-container": "#e1e2e8",
+                      "on-primary-container": "#004405",
+                      "secondary-fixed": "#e1e2e8",
+                      "on-tertiary-fixed": "#0b1c30",
+                      "on-secondary-fixed": "#191c20",
+                      "on-error": "#ffffff",
+                      "surface": "#f7f9fb",
+                      "tertiary": "#505f76",
+                      "outline": "#6f7a6a",
+                      "surface-bright": "#f7f9fb",
+                      "on-surface-variant": "#3f4a3b",
+                      "on-surface": "#191c1e",
+                      "on-secondary-container": "#626469",
+                      "error-container": "#ffdad6",
+                      "secondary": "#5c5e63",
+                      "on-error-container": "#93000a",
+                      "tertiary-container": "#95a5bd",
+                      "surface-container-highest": "#e0e3e5",
+                      "surface-container-high": "#e6e8ea",
+                      "primary": "#006e0e",
+                      "secondary-fixed-dim": "#c5c6cc",
+                      "outline-variant": "#becab7",
+                      "on-primary-fixed": "#002201",
+                      "surface-variant": "#e0e3e5",
+                      "surface-container-low": "#f2f4f6",
+                      "on-primary-fixed-variant": "#005308",
+                      "inverse-surface": "#2d3133",
+                      "primary-fixed-dim": "#73de67",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "none": "0",
+                      "sm": "0.375rem",
+                      "DEFAULT": "0.75rem",
+                      "md": "1rem",
+                      "lg": "1.25rem",
+                      "xl": "1.5rem",
+                      "2xl": "2rem",
+                      "3xl": "2.5rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "base": "8px",
+                      "container-max": "1280px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-xl": [
+                              "Montserrat"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              },
+              "animation": {
+                      "blob": "blob 7s infinite",
+                      "gradient": "gradient 8s linear infinite"
+              },
+              "keyframes": {
+                      "blob": {
+                              "0%": { transform: "translate(0px, 0px) scale(1)" },
+                              "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                              "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                              "100%": { transform: "translate(0px, 0px) scale(1)" }
+                      },
+                      "gradient": {
+                              "0%, 100%": { backgroundPosition: "0% 50%" },
+                              "50%": { backgroundPosition: "100% 50%" }
+                      }
+              }
+      },
+          },
+        }
+      </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Custom Utilities */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(224, 227, 229, 0.5); /* surface-variant/50 */
+        }
+        
+        .glow-hover:hover {
+            box-shadow: 0 10px 25px -5px rgba(79, 185, 72, 0.3); /* primary-container tint */
+            border-color: rgba(79, 185, 72, 0.5);
+            transform: translateY(-8px) scale(1.01);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-16">
+<!-- TopNavBar (From JSON) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface-container/70 backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<img src="assets/logo.png" alt="Alvik Investments Logo" class="h-10 w-auto">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Alvik Investments</span>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#services">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#expertise">Expertise</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#consultancy">Consultancy</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#contact">Contact</a>
+</div>
+<div class="hidden md:flex">
+<button onclick="window.location.href='#contact'" class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors duration-200 active:scale-95">
+                    Get Started
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center pt-16 overflow-hidden">
+<!-- Abstract Tech Background -->
+<div class="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-container via-background to-background"></div>
+<div class="absolute right-0 top-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-primary/30 to-inverse-primary/20 rounded-full blur-[100px] z-0 animate-blob"></div>
+<div class="absolute left-[-10%] bottom-[-10%] w-[400px] h-[400px] bg-gradient-to-tr from-tertiary/30 to-primary-container/20 rounded-full blur-[80px] z-0 animate-blob" style="animation-delay: 2s;"></div>
+<div class="absolute right-[20%] bottom-[-20%] w-[500px] h-[500px] bg-gradient-to-bl from-primary/20 to-surface-tint/20 rounded-full blur-[90px] z-0 animate-blob" style="animation-delay: 4s;"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10 w-full items-center">
+<div class="col-span-1 md:col-span-7 flex flex-col gap-6 pt-12 md:pt-0">
+<div class="inline-flex items-center gap-2 bg-primary-container/10 text-primary px-3 py-1.5 rounded-full w-fit">
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+<span class="font-label-md text-label-md">Precision ICT Solutions</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-background">
+                    Empowering Your Digital Future with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-inverse-primary to-primary bg-[length:200%_auto] animate-gradient">Precision.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Comprehensive software development, AI platforms, and secure cloud infrastructure designed for the demands of the global enterprise market.
+                </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<button onclick="window.location.href='#services'" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-full font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all duration-200 shadow-[0_4px_14px_0_rgba(79,185,72,0.2)]">
+                        Explore Solutions
+                    </button>
+<button onclick="window.location.href='#consultancy'" class="bg-transparent border border-outline text-on-surface px-8 py-3.5 rounded-full font-label-md text-label-md hover:bg-surface-variant transition-colors duration-200">
+                        Consult with an Expert
+                    </button>
+</div>
+</div>
+<div class="col-span-1 md:col-span-5 relative mt-12 md:mt-0 hidden md:block">
+<!-- Bento Hero Graphic -->
+<div class="relative w-full h-[500px]">
+<div class="absolute top-0 right-0 w-[80%] h-[70%] bg-white rounded-xl border border-surface-variant shadow-sm overflow-hidden transform translate-x-4 -translate-y-4">
+<div class="h-full w-full bg-surface-container-low" data-alt="Abstract visualization of a highly secure, modern server farm with glowing green fiber optic cables running through sleek black racks. Clean, bright, light-mode tech aesthetic. Professional corporate photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwcOYVnc1Am5U3KGM6q5aj-Sc6b42lB8-V_MrxOIeaIQNqkfy4xHsxv9CPaxsNazuj19XdDs6J-5H93oVHmPhG_ctRHI0OcDAAFH0ZDT_7zWGqODzDrrQ7opFDrn03Q4FRFEPUt1xRsk_zY2Af7HHOOuYTJQ65j2lv6JBi-NIf5JIzFNaLMhXCCFEgNwhgav945ZBsjtH65PJWBskal6_Uv6pBGElwsoqYC7en34BigzFHvu4LTbXIBh-WpKzG45z6gVkmceTBNh3E')"></div>
+</div>
+<div class="absolute bottom-12 left-0 w-[60%] p-6 glass-panel rounded-xl shadow-lg transform -translate-x-4">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined fill">check_circle</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-background">System Integrity</div>
+<div class="font-caption text-caption text-on-surface-variant">Optimal Performance</div>
+</div>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary w-[98%] h-full rounded-full"></div>
+</div>
+</div>
+<div class="absolute top-1/2 left-1/4 w-[40%] p-4 bg-secondary text-on-secondary rounded-lg shadow-xl transform -translate-y-1/2 -translate-x-12 flex items-center gap-3">
+<span class="material-symbols-outlined">security</span>
+<span class="font-label-md text-label-md">Enterprise Security</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-surface-container-lowest" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 max-w-2xl" id="expertise">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Core Competencies</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Architecting robust, scalable, and secure technology ecosystems to drive operational excellence.</p>
+</div>
+<!-- Bento Grid for Services -->
+<div class="grid grid-cols-1 md:grid-cols-12 auto-rows-[minmax(200px,_auto)] gap-gutter">
+<!-- Card 1: Software & App Engineering -->
+<div class="md:col-span-8 bg-white border border-surface-container-highest rounded-xl p-8 glow-hover transition-all duration-300 group flex flex-col justify-between">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 rounded-lg bg-surface flex items-center justify-center text-primary group-hover:bg-primary-container/10 transition-colors">
+<span class="material-symbols-outlined text-3xl">code_blocks</span>
+</div>
+<span class="bg-tertiary/10 text-on-tertiary-container px-3 py-1 rounded font-caption text-caption">Web &amp; Mobile</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-3">Software &amp; App Engineering</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                            Full-stack development of resilient web platforms, native mobile applications, and complex backend microservices architectures tailored for high-volume transactions.
+                        </p>
+</div>
+</div>
+<!-- Card 2: AI & Analytics -->
+<div class="md:col-span-4 bg-surface-container-low border border-surface-container-highest rounded-xl p-8 glow-hover transition-all duration-300 group flex flex-col justify-between">
+<div class="w-14 h-14 rounded-lg bg-white shadow-sm flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">neurology</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-3 text-xl">AI &amp; Advanced Analytics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Deploying machine learning models and predictive analytics to transform raw data into actionable executive intelligence.
+                        </p>
+</div>
+</div>
+<!-- Card 3: Cloud Infrastructure -->
+<div class="md:col-span-5 bg-white border border-surface-container-highest rounded-xl p-8 glow-hover transition-all duration-300 group flex flex-col justify-between overflow-hidden relative">
+<div class="absolute right-[-20%] bottom-[-20%] opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500">
+<span class="material-symbols-outlined text-[200px]">cloud_done</span>
+</div>
+<div class="w-14 h-14 rounded-lg bg-surface flex items-center justify-center text-primary mb-6 relative z-10">
+<span class="material-symbols-outlined text-3xl">dns</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-on-background mb-3 text-xl">Cloud &amp; Security</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Secure, scalable cloud provisioning, zero-trust architecture implementation, and continuous vulnerability monitoring.
+                        </p>
+</div>
+</div>
+<!-- Card 4: Hardware Procurement -->
+<div class="md:col-span-7 bg-white border border-surface-container-highest rounded-xl p-8 glow-hover transition-all duration-300 group flex flex-col md:flex-row gap-6 items-center">
+<div class="flex-1">
+<div class="w-14 h-14 rounded-lg bg-surface flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">memory</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-3 text-xl">Hardware &amp; Telecom Procurement</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Strategic sourcing of enterprise-grade servers, networking equipment, and electronic systems to ensure infrastructural reliability.
+                        </p>
+</div>
+<div class="w-full md:w-1/3 h-40 bg-surface-container rounded-lg" data-alt="Macro photography of modern enterprise server hardware components, focusing on metallic heat sinks and green PCB boards. Crisp, bright lighting. Minimalist corporate tech aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBjg44zn589l285b-jdVKhU8SHv0ttRggLv2lwK3q1A-oZbmg0aMfYVBszIGkTHcVZ6-oUrop1LAB4TnMHywEf0OZkkQD1V-g1yquciisjkMKNg1RJud7L6-IGjGwq59xw1_CdFh2EtfwEv91kzBngsRqcc2rRQb7vlEjXNjVeRjGPpecEcNvLg8TRnhS8TkW8_XyKvBOBovliqtAJgMeYIIDYTh3EB6OxAiMqzKcEkS5h3PSv8mmFyElBn7Ui-8MZwFjTjNmvAga2H'); background-size: cover; background-position: center;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- About / Consultancy -->
+<section class="py-24 bg-surface" id="consultancy">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1 relative">
+<div class="aspect-square rounded-2xl overflow-hidden bg-surface-container border border-surface-variant shadow-sm relative z-10">
+<img class="w-full h-full object-cover" data-alt="Two senior IT consultants in business casual attire reviewing complex architecture diagrams on a transparent digital whiteboard in a bright, modern corporate office. Natural sunlight, clean white and subtle green branding accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz_6PZJqyZy2Awk4EvSz-sT97sMUBwz3eZ9PJCjSujqv0bbi-Ez852qsND-jzBw67gYUjUG1EVvaAojYXtvCQFc_WlCbshjWl3vYUQvFa_9ZBCmpBI6d6sx4wTihoi-7pszkwLZ8Ndp24QJPnOr7WTQwXNKVsHr-O1jfV7hW0HgXa6NcSgJ0LUXBD3_rFKbsF3nO0l06CroNlW8h3lIaII7MPYSw6DAIVLkFgV9fhedv871glDriSTLfaG6n3SHOkFkia5YRTG7ch2"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -right-6 w-48 h-48 bg-primary-container/20 rounded-xl -z-0"></div>
+</div>
+<div class="order-1 md:order-2 flex flex-col gap-6">
+<h2 class="font-headline-lg text-headline-lg text-on-background">Strategic Technical Consultancy</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Beyond implementation, Alvik Investments provides high-level advisory services to align your ICT infrastructure with business objectives. We audit existing systems, identify critical vulnerabilities, and architect modernization roadmaps.
+                    </p>
+<div class="mt-4 flex flex-col gap-4">
+<div class="flex items-start gap-4 p-4 bg-white rounded-lg border border-surface-container-highest shadow-sm">
+<div class="mt-1 text-primary">
+<span class="material-symbols-outlined fill">build</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-background mb-1">Systems Maintenance</h4>
+<p class="font-caption text-caption text-on-surface-variant">Ongoing lifecycle management and preventive maintenance for critical electronic systems.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-white rounded-lg border border-surface-container-highest shadow-sm">
+<div class="mt-1 text-primary">
+<span class="material-symbols-outlined fill">monitoring</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-background mb-1">Performance Auditing</h4>
+<p class="font-caption text-caption text-on-surface-variant">Rigorous stress testing and bottleneck analysis for existing software and network architectures.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface-container-lowest" id="contact">
+<div class="max-w-[800px] mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Initiate a Project</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12">Connect with our engineering leadership to discuss your infrastructure requirements.</p>
+<div class="bg-white border border-surface-variant rounded-xl p-8 shadow-sm text-left">
+<form id="contact-form" class="space-y-6">
+<!-- hidden inputs for FormSubmit -->
+<input type="hidden" name="_cc" value="victormpala7@gmail.com">
+<input type="hidden" name="_subject" value="New Inquiry from Alvik Investments Website">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-label-md text-on-background mb-2" for="name">Full Name</label>
+<input name="name" class="w-full bg-white border border-outline-variant rounded px-4 py-2.5 font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="name" placeholder="Jane Doe" type="text" required/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-background mb-2" for="email">Corporate Email</label>
+<input name="email" class="w-full bg-white border border-outline-variant rounded px-4 py-2.5 font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="email" placeholder="jane@company.com" type="email" required/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-background mb-2" for="interest">Area of Interest</label>
+<select name="interest" class="w-full bg-white border border-outline-variant rounded px-4 py-2.5 font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-on-surface-variant" id="interest">
+<option>Software Engineering</option>
+<option>Cloud Infrastructure</option>
+<option>AI &amp; Analytics</option>
+<option>Consultancy</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-background mb-2" for="message">Project Brief</label>
+<textarea name="message" class="w-full bg-white border border-outline-variant rounded px-4 py-2.5 font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors resize-none" id="message" placeholder="Briefly describe your requirements..." rows="4" required></textarea>
+</div>
+<button id="submit-btn" class="w-full bg-secondary text-on-secondary py-3 rounded-full font-label-md text-label-md hover:bg-on-background transition-colors flex justify-center items-center gap-2" type="submit">
+                        <span id="btn-text">Submit Inquiry</span> <span id="btn-icon" class="material-symbols-outlined text-sm">send</span>
+</button>
+<div id="form-message" class="hidden text-center font-label-md mt-4"></div>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer (From JSON) -->
+<footer class="w-full py-12 bg-secondary dark:bg-on-secondary-fixed border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<img src="assets/logo.png" alt="Alvik Investments Logo" class="h-10 w-auto">
+<span class="font-headline-md text-headline-md font-bold text-white">Alvik Investments</span>
+</div>
+<p class="font-caption text-caption text-secondary-fixed-dim max-w-xs">Precision ICT Solutions for the modern enterprise.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-white mb-2">Links</span>
+<a class="font-caption text-caption text-secondary-fixed-dim hover:text-white transition-colors w-fit" href="#">Privacy Policy</a>
+<a class="font-caption text-caption text-secondary-fixed-dim hover:text-white transition-colors w-fit" href="#">Terms of Service</a>
+<a class="font-caption text-caption text-secondary-fixed-dim hover:text-white transition-colors w-fit" href="#">LinkedIn</a>
+<a class="font-caption text-caption text-secondary-fixed-dim hover:text-white transition-colors w-fit" href="#">Support</a>
+</div>
+<div class="flex flex-col justify-end md:items-end mt-8 md:mt-0">
+<p class="font-caption text-caption text-secondary-fixed-dim">
+                    © 2026 Alvik Investments. All rights reserved. Precision ICT Solutions.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const form = e.target;
+        const btn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnIcon = document.getElementById('btn-icon');
+        const formMessage = document.getElementById('form-message');
+        
+        // Change button state
+        btn.disabled = true;
+        btnText.textContent = 'Sending...';
+        btnIcon.textContent = 'hourglass_empty';
+        btn.classList.add('opacity-70');
+        formMessage.classList.add('hidden');
+        
+        const formData = new FormData(form);
+        
+        fetch('https://formsubmit.co/ajax/admin@sibandallen.co.zw', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.success) {
+                form.reset();
+                formMessage.textContent = 'Thank you! Your inquiry has been sent successfully.';
+                formMessage.className = 'text-center font-label-md mt-4 text-primary';
+            } else {
+                formMessage.textContent = 'Oops! Something went wrong. Please try again.';
+                formMessage.className = 'text-center font-label-md mt-4 text-error';
+            }
+        })
+        .catch(error => {
+            formMessage.textContent = 'Oops! Something went wrong. Please try again.';
+            formMessage.className = 'text-center font-label-md mt-4 text-error';
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btnText.textContent = 'Submit Inquiry';
+            btnIcon.textContent = 'send';
+            btn.classList.remove('opacity-70');
+            formMessage.classList.remove('hidden');
+        });
+    });
+</script>
+</body></html>
